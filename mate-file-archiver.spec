@@ -1,11 +1,11 @@
 Summary:	Archive manager for MATE
 Name:		mate-file-archiver
-Version:	1.6.0
+Version:	1.6.1
 Release:	1
 License:	GPL v2
 Group:		X11/Applications
 Source0:	http://pub.mate-desktop.org/releases/1.6/%{name}-%{version}.tar.xz
-# Source0-md5:	8a23b4504605473f790ed9b3f58bfe6e
+# Source0-md5:	d39a63d5e7d84c3ca2c810964837f9cc
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	gettext-devel
@@ -91,11 +91,12 @@ rm -rf $RPM_BUILD_ROOT
 %files -f engrampa.lang
 %defattr(644,root,root,755)
 %doc AUTHORS NEWS README
-%dir %{_libdir}/engrampa
+%dir %{_libdir}/mate-file-archiver
 %attr(755,root,root) %{_bindir}/engrampa
-%attr(755,root,root) %{_libdir}/engrampa/*.sh
-%attr(755,root,root) %{_libdir}/engrampa/rpm2cpio
+%attr(755,root,root) %{_libdir}/mate-file-archiver/*.sh
+%attr(755,root,root) %{_libdir}/mate-file-archiver/rpm2cpio
 %{_datadir}/engrampa
+%{_datadir}/mate-file-archiver
 %{_datadir}/glib-2.0/schemas/org.mate.engrampa.gschema.xml
 %{_desktopdir}/*.desktop
 %{_iconsdir}/hicolor/*/apps/engrampa.*
